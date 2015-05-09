@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to :controller => 'product', :action => 'create', :id => @product.id, notice: 'Product was successfully created.' }
+        format.html { redirect_to :controller => 'products', :action => 'show', :id => @product.id, :notice 'Product was successfully created.' }
 
       else
         format.html { render action: "new" }
