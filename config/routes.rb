@@ -4,7 +4,7 @@ Blackandgold::Application.routes.draw do
 get '/events', to: 'events#index'
 get '/contact', to: 'contact#index'
 get '/products/new', to: 'products#new'
-
+post '/products', to: 'products#create'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
