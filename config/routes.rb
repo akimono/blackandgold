@@ -1,9 +1,6 @@
 Blackandgold::Application.routes.draw do
 
 
-  match '/products' => 'products_index'
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
