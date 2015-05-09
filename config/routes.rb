@@ -1,12 +1,9 @@
 Blackandgold::Application.routes.draw do
-  get "contact/index"
 
-  get "events/index"
 
   match '/products' => 'products_index'
-  match '/events' => 'events_index'
-  match '/contact' => 'contact_index'
-  get "home/index"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
