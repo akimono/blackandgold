@@ -1,4 +1,10 @@
 Blackandgold::Application.routes.draw do
+  get "contact/index"
+
+  get "events/index"
+
+  get "products/index"
+
   get "home/index"
 
   # The priority is based upon order of creation:
