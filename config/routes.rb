@@ -1,5 +1,6 @@
 Blackandgold::Application.routes.draw do
 
+ get '/products', to: 'products#index'
 
 
   # The priority is based upon order of creation:
