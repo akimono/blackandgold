@@ -32,4 +32,5 @@ def show
       format.html # show.html.erb
       format.json { render json: @product }
 	end
+ end
 end
