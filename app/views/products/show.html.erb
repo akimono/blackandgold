@@ -1,0 +1,20 @@
+  <b><%= @product.name %></b>
+
+<br><br>
+  <%= image_tag @product.image %><br><br>
+ <% if @product.video != ""  %>
+ <%=  raw @product.video %>
+ <% end %><br>br>
+ <center>
+<p>
+  <%= @product.description %>
+</p>
+
+<p>
+
+  <%= number_to_currency @product.price %>
+</p>
+
+<p>
+  <b> <%= @product.producttype %> </b><br><br>
+  <b> <%= @product.stockstatus %></b>
