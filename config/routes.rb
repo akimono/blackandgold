@@ -5,7 +5,7 @@ get '/events', to: 'events#index'
 get '/contact', to: 'contact#index'
 get '/products/new', to: 'products#new'
 post '/products', to: 'products#create'
-get 'products/:id', to:'products#show'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
