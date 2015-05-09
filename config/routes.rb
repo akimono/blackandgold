@@ -3,7 +3,7 @@ Blackandgold::Application.routes.draw do
 
   get "events/index"
 
-  resources :products
+  match '/products' => 'products_index'
 
   get "home/index"
 
