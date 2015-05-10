@@ -1,7 +1,7 @@
   <b><%= @product.name %></b>
 
 <br><br>
-  <%=  @product.image %><br><br>
+  <%= image_tag @product.image_url.to_s %><br><br>
  <% if @product.video != ""  %>
  <%=  raw @product.video %>
  <% end %><br><br>
