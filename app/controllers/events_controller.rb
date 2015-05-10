@@ -8,7 +8,10 @@ class EventsController < ApplicationController
   end
   def new
   	   @event = Events.new
-      
+       respond_to do |format|
+      format.html # new.html.erb
+      format.json {render json: @event}
+  	end
   end
     def create
     @event = Events.new(params[:events])
