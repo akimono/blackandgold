@@ -3,6 +3,6 @@
 <%= link_to 'Add New Product', controller: "products", action:"new" %>
 <table>
 
-<% @products.each do |product| %>
+<% @product.each do |product| %>
 <tr><td> <%= product.name %> </td><td> <%= product.price %> </td> <td> <%= product.producttype %> </td> <td> <%= product.stockstatus %> </td> 
 	<% end %>
