@@ -42,4 +42,5 @@ end
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
 		end
+	end
 end
