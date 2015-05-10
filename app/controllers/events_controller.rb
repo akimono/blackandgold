@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   	end
   end
   def new
-  	   @event = Events.new
+  	   @events = Events.new
        respond_to do |format|
       format.html # new.html.erb
   	end
