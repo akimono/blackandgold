@@ -4,5 +4,5 @@
 <table>
 
 <% @product.each do |product| %>
-<tr><td> <%= product.name %> </td><td> <%= product.price %> </td> <td> <%= product.producttype %> </td> <td> <%= product.stockstatus %> </td> 
+<tr><td> <%= product.name %> </td><td> <%= product.price %> </td> <td> <%= product.producttype %> </td> <td> <%= product.stockstatus %> </td> <td> <%= link_to "show", product.id %> </td>
 	<% end %>
