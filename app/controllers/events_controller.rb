@@ -6,6 +6,9 @@ class EventsController < ApplicationController
       format.json {render json: @event}
   	end
   end
+  def events_index 
+  	@event= Events.all
+  end
   def new
   	   @event = Events.new
        respond_to do |format|
