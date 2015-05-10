@@ -2,8 +2,8 @@
 
 class ImageUploader < CarrierWave::Uploader::Base
 
-  # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
+ #  Include RMagick or MiniMagick support:
+  include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
@@ -16,13 +16,13 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
   def default_url(*args)
-    "/images/rails.png"
+    "/images/noimage.png"
   end
  version :thumb do 
-   process :resize_to_fit => [50, 50]
+   process :resize_to_limit => [50, 50]
  end
  version :main do
-  process :resize_to_fit => [200, 300]
+  process :resize_to_limit => [200, 300]
 end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
