@@ -13,7 +13,7 @@ class EventsController < ApplicationController
   	end
   end
     def create
-    @event = Event.new(params[:events])
+    @event = Event.new(params[:event])
 
     respond_to do |format|
      	 if @event.save
