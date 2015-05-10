@@ -4,5 +4,5 @@
 <table>
 
 <% @event.each do |event| %>
-<tr><td> <%= event.name %> </td><td> <%= event.start %> </td> <td> <%= link_to "show", event_path(event) %> </td><td> <%= link_to "edit", edit_event_path(event) %></td><td> <%= link_to "destroy", event, method: :delete, data: {confirm: 'Are you sure?' } %></td>
+<tr><td> <%= event.name %> </td><td> <%= event.start.to_formatted_s(:long_ordinal) %> </td> <td> <%= link_to "show", event_path(event) %> </td><td> <%= link_to "edit", edit_event_path(event) %></td><td> <%= link_to "destroy", event, method: :delete, data: {confirm: 'Are you sure?' } %></td>
 	<% end %>
