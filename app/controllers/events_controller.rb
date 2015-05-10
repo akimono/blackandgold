@@ -1,19 +1,19 @@
 class EventsController < ApplicationController
   def index
-  	@event = Events.all
+  	@event = Event.all
       respond_to do |format|
       format.html # index.html.erb
       format.json {render json: @event}
   	end
   end
   def new
-  	   @event = Events.new
+  	   @event = Event.new
        respond_to do |format|
       format.html # new.html.erb
   	end
   end
     def create
-    @event = Events.new(params[:events])
+    @event = Event.new(params[:events])
 
     respond_to do |format|
      	 if @event.save
@@ -24,13 +24,13 @@ class EventsController < ApplicationController
    	 end
 end
 	def show
-		@event = Events.find(params[:id])
+		@event = Event.find(params[:id])
 		end
 		def edit
-			@event = Events.find(params[:id])
+			@event = Event.find(params[:id])
 		end
 		def update
-			@event = Events.find(params[:id])
+			@event = Event.find(params[:id])
 
       respond_to do |format|
       if @event.update_attributes(params[:Event])
@@ -43,7 +43,7 @@ end
 		end
 	end
 	def destroy
-		 @event = Events.find(params[:id])
+		 @event = Event.find(params[:id])
     @event.destroy
 
     respond_to do |format|
