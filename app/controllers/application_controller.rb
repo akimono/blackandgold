@@ -7,4 +7,5 @@ class ApplicationController < ActionController::Base
   		@cart = session[:cart]
   		cookies[:cart] = @cart
 	end
+ end
 end
