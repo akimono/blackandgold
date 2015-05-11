@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
   	@event = Event.all
+  	@cart = @cart
       respond_to do |format|
       format.html # index.html.erb
       format.json {render json: @event}
@@ -14,7 +15,6 @@ class EventsController < ApplicationController
   end
     def create
     @event = Event.new(params[:event])
-
     respond_to do |format|
      	 if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -25,13 +25,13 @@ class EventsController < ApplicationController
 end
 	def show
 		@event = Event.find(params[:id])
+		@cart = @cart
 		end
 		def edit
 			@event = Event.find(params[:id])
 		end
 		def update
 			@event = Event.find(params[:id])
-
       respond_to do |format|
       if @event.update_attributes(params[:Event])
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }

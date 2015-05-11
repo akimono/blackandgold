@@ -1,5 +1,13 @@
 Blackandgold::Application.routes.draw do
 
+  get "cart/show"
+
+  get "cart/create"
+
+  get "cart/edit"
+
+  get "cart/update"
+
  get '/products', to: 'products#index'
 get '/contact', to: 'contact#index'
 get '/products/new', to: 'products#new'

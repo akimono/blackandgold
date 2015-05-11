@@ -11,6 +11,15 @@
 <%= link_to 'Products', products_path %>
 <%= link_to 'Events', events_path %>
 <%= link_to 'Contact', contact_path %>
+
+<% if @cart.present? %>
+<div class="cart">
+<div class="cart_title"> Your Cart</div>
+
+<%= @cart %>
+
+</div>
+<% end %>
 <%= yield %>
 
 </body>

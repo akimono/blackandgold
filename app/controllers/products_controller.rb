@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
   	@product = Product.all
+    @cart = @cart
       respond_to do |format|
       format.html # index.html.erb
       format.json {render json: @product}
@@ -26,6 +27,7 @@ class ProductsController < ApplicationController
 end
 	def show
 		@product = Product.find(params[:id])
+    @cart = @cart
 		end
 		def edit
 			@product = Product.find(params[:id])
