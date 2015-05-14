@@ -23,8 +23,8 @@
 <% @each =  f %>
 <%= @each %><br>
 <%= @each.split("B") %><br><br>
-<%= @prodnum = @each[1] %>
-<% @lineprod = Product.find(@prodnum).name %>
+<%= @prodnum = @each.split("B") %>
+<% @lineprod = Product.find(@prodnum[1]).name %>
 <%= @lineprod %><br><br><br>
 <%end%>
 
