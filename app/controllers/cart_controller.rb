@@ -3,7 +3,7 @@ class CartController < ApplicationController
   end
 
   def create
-  	if (session[:cart] = nil )
+  	if (session[:cart].nil? )
   	session[:cart] = 'A1B'+params[:cart]
   	redirect_to controller: 'products', action: 'index'
   else
