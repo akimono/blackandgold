@@ -18,8 +18,10 @@
 
 <%= @cart %>
 <% @lines = @cart.split("A") %>
+<%= @lines %>
 <%= @lines.each do |f| %>
 <% f.split("B") %>
+<%= f %>
 <%= f[1] %><br><%=f[2]%>
 <%end%>
 
