@@ -3,8 +3,8 @@ class CartController < ApplicationController
   end
 
   def create
-  	@cart = params[:cart]
-  	session[:cart] = @cart
+  	
+  	session[:cart] = params[:cart]
   	redirect_to controller: 'products', action: 'index'
   end
 

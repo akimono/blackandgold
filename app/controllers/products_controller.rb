@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
   	@product = Product.all
-    @cart = @cart
+    @cart = session[:cart]
       respond_to do |format|
       format.html # index.html.erb
       format.json {render json: @product}
