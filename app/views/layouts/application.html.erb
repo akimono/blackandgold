@@ -19,9 +19,7 @@
 <%= @cart %><br>
 <% @lines = @cart.split("A") %>
 <%= @lines %><br><br><br>
-<% @lines.each do |f| %>
-<%= f.reverse.chomp('B') %><br><br>
-<%= f.chomp('B')%>
+<%= @lines.split("B") %>
 
 <%end%>
 
