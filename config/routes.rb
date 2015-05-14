@@ -14,6 +14,7 @@ get '/products/new', to: 'products#new'
 post '/products', to: 'products#create'
 get '/products/:id', to: 'products#show'
 post '/cart/create', to: 'cart#create'
+post '/cart/destroy', to:'cart#destroy'
 
 resources :products
 resources :events
