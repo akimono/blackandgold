@@ -4,7 +4,7 @@ class CartController < ApplicationController
 
   def create
   	
-  	session[:cart] = session[:cart]+params[:cart]
+  	session[:cart] = session[:cart]+A1B+params[:cart]
   	redirect_to controller: 'products', action: 'index'
   end
 
