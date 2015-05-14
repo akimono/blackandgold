@@ -3,6 +3,9 @@ class CartController < ApplicationController
   end
 
   def create
+  	@cart = params[:cart]
+  	session[:cart] = @cart
+  	redirect_to product_path
   end
 
   def edit
