@@ -13,4 +13,8 @@ class CartController < ApplicationController
 
   def update
   end
+  def destroy
+  	session[:cart] = nil
+  	redirect_to controller: 'products', action: 'index'
+  end
 end
