@@ -19,7 +19,11 @@
 <%= @cart %><br>
 <% @lines = @cart.split("A") %>
 <%= @lines %><br><br><br>
-<%= @lines.split("B") %>
+<%= @lines.each do |f| %>
+<% @each =  f %>
+<%= @each %><br><br>
+<%= @each.split("B") %><br>
+<%end%>
 
 
 
