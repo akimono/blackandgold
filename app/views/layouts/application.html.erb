@@ -26,6 +26,7 @@
 <%= @prodnum = @each.split("B") %>
 <% @lineprod = Product.find(@prodnum[1]).name %>
 <%= @lineprod %><br><br><br>
+Product <%= Product.find(@prodnum[1]).name %>, Price: <%= Product.find(@prodnum[1]).price %>, Quantitiy: <%= @prodnum[0]%><br><br>
 <%end%>
 
 
