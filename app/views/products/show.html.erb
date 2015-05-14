@@ -18,4 +18,4 @@
 <p>
   <b> <%= @product.producttype %> </b><br><br>
   <b> <%= @product.stockstatus %></b>
-  <%= button_to "Add to Cart", create_cart_path, :cart => @product.id %>
+  <%= button_to "Add to Cart", :controller => 'cart', :action => 'create' , :cart => @product.id %>
