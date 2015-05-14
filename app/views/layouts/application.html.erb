@@ -21,8 +21,10 @@
 <%= @lines %><br><br><br>
 <%= @lines.each do |f| %>
 <% @each =  f %>
-<%= @each %><br><br>
-<%= @each.split("B") %><br>
+<%= @each %><br>
+<%= @each.split("B") %><br><br>
+<% @lineprod = Product.find(@each[2]) %>
+<%= @lineprod %><br><br><br>
 <%end%>
 
 
