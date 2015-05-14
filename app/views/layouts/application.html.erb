@@ -17,8 +17,13 @@
 <div class="cart_title"> Your Cart</div>
 
 <%= @cart %>
-<%= @cart.split("A") %>
-<%= @cart.split("B")%>
+<% @lines = @cart.split("A") %>
+<%= @lines.each do |f| %>
+<% f.split("B") %>
+<%= f[1] %><br><%=f[2]%>
+<%end%>
+
+
 <%= button_to "Clear Cart", :controller => 'cart', :action => 'destroy' %>
 </div>
 <% end %>
