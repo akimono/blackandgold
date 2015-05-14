@@ -16,13 +16,13 @@
 <div class="cart">
 <div class="cart_title"> Your Cart</div>
 
-<%= @cart %>
+<%= @cart %><br>
 <% @lines = @cart.split("A") %>
-<%= @lines %>
-<%= @lines.each do |f| %>
+<%= @lines %><br>
+<% @lines.each do |f| %>
 <% f.split("B") %>
-<%= f %>
-<%= f[1] %><br><%=f[2]%>
+<%= f %><br><br>
+<%= f[1] %><br><%= f[2]%>
 <%end%>
 
 
