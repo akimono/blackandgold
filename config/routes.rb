@@ -13,7 +13,7 @@ get '/contact', to: 'contact#index'
 get '/products/new', to: 'products#new'
 post '/products', to: 'products#create'
 get '/products/:id', to: 'products#show'
-post '/cart', to: 'cart#create'
+post '/cart/create', to: 'cart#create'
 
 resources :products
 resources :events
