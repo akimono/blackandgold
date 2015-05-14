@@ -5,7 +5,7 @@ class CartController < ApplicationController
   def create
   	@cart = params[:cart]
   	session[:cart] = @cart
-  	redirect_to index_product_path
+  	redirect_to controller: 'product', action: 'index'
   end
 
   def edit
